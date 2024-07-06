@@ -457,19 +457,41 @@ a {
   border-radius: var(--radius-18);
   padding: 10px;
   box-shadow: var(--shadow-1);
+  max-width: 500px; 
+  margin: 0 auto; 
 }
 
 .featured-car-card .card-banner {
   background: hsla(0, 0%, 0%, 0.2);
-  aspect-ratio: 3 / 2;
   border-radius: var(--radius-18);
   overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
 }
 
 .featured-car-card .card-banner > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: var(--radius-18);
 }
+
+@media (max-width: 768px) {
+  .featured-car-card {
+    max-width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-car-card .card-banner {
+    padding-top: 75%; 
+  }
+}
+
 
 .featured-car-card .card-content {
   padding: 20px 10px 10px;
@@ -697,8 +719,8 @@ figure.snip1192 * {
 }
 figure.snip1192 img {
   max-width: 100%;
-  height: 175px;
-  width: 175px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   margin-bottom: 15px;
   display: inline-flex;
@@ -750,6 +772,23 @@ figure.snip1192 .author h5 span {
   font-weight: 400;
   text-transform: none;
   display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .snip1192_parent {
+    justify-content: center;
+  }
+  figure.snip1192 {
+    margin: 10px auto;
+  }
+  figure.snip1192 img {
+    max-width: 80px;   /* Further reduced size for smaller screens */
+    max-height: 80px;  /* Further reduced size for smaller screens */
+  }
+  figure.snip1192 blockquote {
+    padding: 20px 30px 50px 30px;
+  }
 }
 
 
